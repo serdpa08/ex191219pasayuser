@@ -1,0 +1,64 @@
+
+body {
+  font-family: "fira-sans-2", sans-serif;
+  background-color: #ccc;
+}
+
+@mixin colorespasayuser($colorBorde, $colorFondo){
+    border-color: $colorBorde;
+    color: white;
+    background-color: $colorFondo;
+}
+
+.btn{
+    text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 5px;
+
+  &__price{
+    background-color: white;
+  color: #fff;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: -10px; /* realign button text padding */
+  font-weight: 600;
+  background-color: #333;
+  opacity: 0.4;
+  border-radius: 5px 0 0 5px;
+  }
+
+  &__price{
+    padding: 0 10px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &--big{
+    font-size: 28px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  &--blue{
+      @include colorespasayuser(#0074d9,#0074d9 );
+    
+  }
+
+  &--orange{
+    @include colorespasayuser(#ff4136,#ff4136 )
+   
+  }
+
+  &--green{
+    @include colorespasayuser(#3d9970,#3d9970 )
+    
+  }
+
+
+}
