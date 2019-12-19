@@ -14,24 +14,24 @@ body {
   counter-reset: titulopasayuser;
 }
 
-h2::before {
+h2 {
+  counter-reset: subtitulopasayuser;
+}
+h2:before {
   counter-increment: titulopasayuser;
   content: "Suscripción " counter(titulopasayuser) " ";
 }
 
 h3 {
-  counter-reset: subtitulopasayuser;
+  counter-reset: contenidopasayuser;
 }
 h3:before {
   counter-increment: subtitulopasayuser;
   content: counter(titulopasayuser) "." counter(subtitulopasayuser);
 }
 
-h4 {
-  counter-increment: subtitulopasayuser;
-  counter-reset: contenidopasayuser;
-}
 h4:before {
+  counter-increment: subtitulopasayuser;
   counter-increment: contenidopasayuser;
   content: counter(titulopasayuser) "." counter(subtitulopasayuser) "." counter(contenidopasayuser);
 }
