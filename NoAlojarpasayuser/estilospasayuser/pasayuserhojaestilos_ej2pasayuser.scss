@@ -1,0 +1,75 @@
+$fuente: Verdana, Geneva, Tahoma, sans-serif;
+$color: blueviolet;
+
+@mixin mixinpasayuserej2($tamanio) {
+    border: $tamanio solid black;
+    box-sizing: border-box;
+    text-align: left;
+    font-family: $fuente;
+    color: $color;
+    
+}
+
+.contenedorpasayuser{
+    width: 100%;
+
+    > div{
+        float: left;
+        width: 49%;
+        min-height: 400px;
+        @include mixinpasayuserej2(2px);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .contenedorpasayuser{
+        width: 100%;
+
+        > div{
+            float: none;
+            width: 100%;
+            @include mixinpasayuserej2(3px);
+        }
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    >div{
+    width: 25%;
+    
+    background-color: brown;
+    padding: 10px;
+    
+    border: 2px solid black;
+    box-sizing: border-box;
+
+    &:hover{
+        background-color: yellow;
+        color: black;
+    }
+    > a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    
+    }
+
+}
+}
+
+@media screen and (max-width: 400px){
+    nav {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column-reverse;
+    
+    > div{
+        
+        width: 100%;
+        
+    }
+}
+}
